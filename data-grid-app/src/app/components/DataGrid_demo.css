@@ -1,0 +1,68 @@
+.data-grid-container {
+  background-color: #1d1d1d;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.table-wrapper {
+  border: 1px solid #404040;
+  max-height: 400px;
+  /* Fixed height like Handsontable */
+  overflow: auto;
+  /* Enable both x and y scrolling */
+  position: relative;
+  /* For sticky header */
+}
+
+.data-grid-table {
+  background-color: #1d1d1d;
+  color: #d1d5db;
+  /* width: 100%; */
+  table-layout: fixed;
+}
+
+.data-grid-header {
+  background-color: #2d2d2d;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.data-grid-cell {
+  /* display: inline-block; */
+  padding: 6px 6px;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  vertical-align: top;
+  height: auto;
+  overflow: visible;
+  min-width: 150px;
+}
+
+.data-grid-input {
+  width: 100%;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  height: auto;
+  line-height: normal;
+  display: block;
+  resize: none;
+  overflow: hidden;
+}
+
+.data-grid-input:focus {
+  outline: none;
+  background-color: #2d2d2d;
+}
+
+.data-grid-checkbox {
+  height: 14px;
+  width: 14px;
+  border-radius: 3px;
+  border: 1px solid #4b5563;
+  background-color: #374151;
+  margin: 0;
+}
