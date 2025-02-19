@@ -72,30 +72,26 @@ const DataGrid_demo: React.FC = () => {
       <h1 className="text-4xl text-white mb-4">Demo</h1>
       <p className="text-gray-400 mb-8">Play around with a demo of Handsontable, in your favorite framework.</p>
 
-      <div className="table-wrapper bg-white inline-flex rounded-lg overflow-scroll h-[400px] max-w-full w-auto">
+      <div className="table-wrapper bg-white inline-flex rounded-lg overflow-scroll h-[400px] max-w-[400px] w-auto">
         <table className="data-grid-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
           <thead className="data-grid-header">
             <tr>
-              <th className="data-grid-cell col-id"></th>
-              <th className="data-grid-cell col-company">Company Name</th>
-              <th className="data-grid-cell col-name">Name</th>
-              <th className="data-grid-cell col-date">Sell date</th>
-              <th className="data-grid-cell col-stock" style={{ borderRight: 'none' }}>In stock</th>
+              <th className="data-grid-cell col-id">ID</th>
+              <th className="data-grid-cell col-width">Company Name</th>
+              <th className="data-grid-cell col-width">Name</th>
+              <th className="data-grid-cell col-width">Sell date</th>
+              <th className="data-grid-cell col-width">In stock</th>
+              <th className="data-grid-cell col-width">Sell date</th>
+              <th className="data-grid-cell col-width">Sell date</th>
             </tr>
           </thead>
           <tbody>
             {data.map((row) => (
               <tr key={row.id}>
-                <td className="data-grid-cell">
-                  <textarea
-                    value={row.id}
-                    onChange={(e) => handleCellEdit(row.id, 'id', e.target.value)}
-                    onInput={handleInput}
-                    className="data-grid-input"
-                    rows={1}
-                  />
+                <td className="data-grid-cell-two">
+                  {row.id}
                 </td>
-                <td className="data-grid-cell">
+                <td className="data-grid-cell-two">
                   <textarea
                     value={row.company}
                     onChange={(e) => handleCellEdit(row.id, 'company', e.target.value)}
@@ -104,7 +100,7 @@ const DataGrid_demo: React.FC = () => {
                     rows={1}
                   />
                 </td>
-                <td className="data-grid-cell">
+                <td className="data-grid-cell-two">
                   <textarea
                     value={row.name}
                     onChange={(e) => handleCellEdit(row.id, 'name', e.target.value)}
@@ -113,7 +109,7 @@ const DataGrid_demo: React.FC = () => {
                     rows={1}
                   />
                 </td>
-                <td className="data-grid-cell">
+                <td className="data-grid-cell-two">
                   <textarea
                     value={row.sellDate}
                     onChange={(e) => handleCellEdit(row.id, 'sellDate', e.target.value)}
@@ -122,18 +118,39 @@ const DataGrid_demo: React.FC = () => {
                     rows={1}
                   />
                 </td>
-                <td className="data-grid-cell" style={{ borderRight: 'none' }}>
-                  <input
-                    type="checkbox"
-                    checked={row.inStock}
-                    onChange={() => handleCheckboxToggle(row.id)}
-                    className="data-grid-checkbox"
+                <td className="data-grid-cell-two">
+                  <div>
+                    <input
+                      type="checkbox"
+                      checked={row.inStock}
+                      onChange={() => handleCheckboxToggle(row.id)}
+                      className="data-grid-checkbox"
+                    />
+                  </div>
+                </td>
+                <td className="data-grid-cell-two">
+                  <textarea
+                    value={row.sellDate}
+                    onChange={(e) => handleCellEdit(row.id, 'sellDate', e.target.value)}
+                    onInput={handleInput}
+                    className="data-grid-input"
+                    rows={1}
                   />
+                </td>
+                <td className="data-grid-cell-two">
+                  <div>
+                    hello
+                  </div>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
+      </div>
+      <div className='py-10'>
+        <div className='prac-grid'>
+          testing 12 testingtesting 12 testingtesting 12 testing
+        </div>
       </div>
     </div>
   );

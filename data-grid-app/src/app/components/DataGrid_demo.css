@@ -7,18 +7,17 @@
 .table-wrapper {
   border: 1px solid #404040;
   max-height: 400px;
-  /* Fixed height like Handsontable */
   overflow: auto;
-  /* Enable both x and y scrolling */
   position: relative;
-  /* For sticky header */
+  /* width: fit-content; */
 }
 
 .data-grid-table {
   background-color: #1d1d1d;
   color: #d1d5db;
-  /* width: 100%; */
-  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  /* width: fit-content; */
 }
 
 .data-grid-header {
@@ -29,15 +28,34 @@
 }
 
 .data-grid-cell {
-  /* display: inline-block; */
-  padding: 6px 6px;
+  padding: 6px;
   border-right: 1px solid #404040;
   border-bottom: 1px solid #404040;
   vertical-align: top;
-  height: auto;
-  overflow: visible;
+  white-space: nowrap;
+}
+
+.data-grid-cell-two {
+  padding: 6px;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  vertical-align: top;
+  white-space: nowrap;
+  background-color: #4d4d4d;
+}
+
+.prac-grid {
+  width: fit-content;
+  background-color: #2d2d2d;
+  max-width: 400px;
   min-width: 150px;
 }
+
+/* 
+.col-width{
+  max-width: 400px;
+  min-width: 150px;
+} */
 
 .data-grid-input {
   width: 100%;
