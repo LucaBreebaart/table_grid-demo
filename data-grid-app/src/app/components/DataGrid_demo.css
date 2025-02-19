@@ -84,3 +84,32 @@
   background-color: #374151;
   margin: 0;
 }
+
+/*  */
+
+.table {
+  border: 1px solid #404040;
+  max-height: 400px;
+  overflow: auto;
+  position: relative;
+}
+
+.table-heading {
+  padding: 6px;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+
+.table-col {
+  width: fit-content;
+  max-width: 200px;
+  min-width: 50px;
+
+  padding: 6px;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  vertical-align: top;
+}

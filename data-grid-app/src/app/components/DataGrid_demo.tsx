@@ -152,6 +152,18 @@ const DataGrid_demo: React.FC = () => {
           testing 12 testingtesting 12 testingtesting 12 testing
         </div>
       </div>
+
+      <table className='table'>
+        <tr className='table-row'>
+          <th className='table-heading'>Heading</th>
+          <th className='table-heading'>Heading</th>
+        </tr>
+        <tr className='table-row'>
+          <td className='table-col'>loooooong text loooooong text  loooooong text  loooooong text  loooooong text text text text </td>
+          <td className='table-col'>Short</td>
+        </tr>
+      </table>
+
     </div>
   );
 };
