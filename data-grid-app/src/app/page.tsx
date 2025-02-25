@@ -27,11 +27,12 @@
 
 import DataGrid_demo from "./components/DataGrid_demo";
 import DataGrid_demo_two from "./components/DataGrid_demo_two";
+import QualityControlTable from "./components/QualityControlTable";
 
 export default function Page() {
   return (
     <div className="p-4">
-      <DataGrid_demo_two />
+      <QualityControlTable />
     </div>
   );
 }
