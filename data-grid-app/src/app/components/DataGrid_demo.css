@@ -9,66 +9,61 @@
   max-height: 400px;
   overflow: auto;
   position: relative;
-  /* width: fit-content; */
 }
 
 .data-grid-table {
-  background-color: #1d1d1d;
   color: #d1d5db;
   border-collapse: separate;
   border-spacing: 0;
-  /* width: fit-content; */
 }
 
-.data-grid-header {
-  background-color: #2d2d2d;
+/* .data-grid-header {
   position: sticky;
   top: 0;
   z-index: 10;
-}
+} */
 
 .data-grid-cell {
+  width: fit-content;
+  min-width: 50px;
+  max-width: 200px;
   padding: 6px;
   border-right: 1px solid #404040;
   border-bottom: 1px solid #404040;
   vertical-align: top;
-  white-space: nowrap;
-}
-
-.data-grid-cell-two {
-  padding: 6px;
-  border-right: 1px solid #404040;
-  border-bottom: 1px solid #404040;
-  vertical-align: top;
-  white-space: nowrap;
   background-color: #4d4d4d;
 }
 
-.prac-grid {
+.data-grid-cell-two {
   width: fit-content;
-  background-color: #2d2d2d;
-  max-width: 400px;
-  min-width: 150px;
+  min-width: 50px;
+  max-width: 350px;
+  overflow: hidden;
+  padding: 6px;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  vertical-align: top;
+  background-color: #4d4d4d;
 }
 
-/* 
-.col-width{
-  max-width: 400px;
-  min-width: 150px;
-} */
-
 .data-grid-input {
-  width: 100%;
+  display: block;
   background-color: transparent;
   color: inherit;
   border: none;
   padding: 0;
   font-size: 14px;
-  height: auto;
-  line-height: normal;
-  display: block;
+  line-height: 1.5;
   resize: none;
   overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.col-id {
+  min-width: unset;
+  max-width: unset;
+  width: fit-content;
 }
 
 .data-grid-input:focus {
@@ -82,16 +77,16 @@
   border-radius: 3px;
   border: 1px solid #4b5563;
   background-color: #374151;
-  margin: 0;
+  cursor: pointer;
 }
 
 /*  */
-
 .table {
   border: 1px solid #404040;
   max-height: 400px;
   overflow: auto;
   position: relative;
+  table-layout: fixed; /* Added for better column behavior */
 }
 
 .table-heading {
@@ -102,14 +97,35 @@
   white-space: nowrap;
 }
 
-
 .table-col {
   width: fit-content;
   max-width: 200px;
   min-width: 50px;
-
   padding: 6px;
   border-right: 1px solid #404040;
   border-bottom: 1px solid #404040;
   vertical-align: top;
+  overflow-wrap: break-word; /* Better word wrapping */
+  word-break: break-word; /* Prevents overflow of long words */
+}
+
+.editable-cell {
+  width: fit-content;
+  min-width: inherit;
+  max-width: 100%; /* Ensure it doesn't exceed parent width */
+  outline: none;
+  display: inline-block;
+  overflow-wrap: break-word; /* Wrap long words */
+  word-break: break-word; /* Break words when necessary */
+  white-space: pre-wrap; /* Preserve whitespace but allow wrapping */
+}
+
+.editable-cell:empty::before {
+  content: "Type here...";
+  color: #aaa;
+  font-style: italic;
+}
+
+.editable-cell:focus {
+  background-color: rgba(0, 0, 0, 0.05);
 }

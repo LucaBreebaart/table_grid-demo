@@ -26,11 +26,12 @@
 // }
 
 import DataGrid_demo from "./components/DataGrid_demo";
+import DataGrid_demo_two from "./components/DataGrid_demo_two";
 
 export default function Page() {
   return (
     <div className="p-4">
-      <DataGrid_demo />
+      <DataGrid_demo_two />
     </div>
   );
 }

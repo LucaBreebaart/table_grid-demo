@@ -72,7 +72,7 @@ const DataGrid_demo: React.FC = () => {
       <h1 className="text-4xl text-white mb-4">Demo</h1>
       <p className="text-gray-400 mb-8">Play around with a demo of Handsontable, in your favorite framework.</p>
 
-      <div className="table-wrapper bg-white inline-flex rounded-lg overflow-scroll h-[400px] max-w-[400px] w-auto">
+      <div className="table-wrapper bg-white rounded-lg overflow-scroll h-[400px] max-w-[600px]">
         <table className="data-grid-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
           <thead className="data-grid-header">
             <tr>
@@ -88,9 +88,11 @@ const DataGrid_demo: React.FC = () => {
           <tbody>
             {data.map((row) => (
               <tr key={row.id}>
+
                 <td className="data-grid-cell-two">
                   {row.id}
                 </td>
+
                 <td className="data-grid-cell-two">
                   <textarea
                     value={row.company}
@@ -100,6 +102,7 @@ const DataGrid_demo: React.FC = () => {
                     rows={1}
                   />
                 </td>
+
                 <td className="data-grid-cell-two">
                   <textarea
                     value={row.name}
@@ -108,6 +111,7 @@ const DataGrid_demo: React.FC = () => {
                     className="data-grid-input"
                     rows={1}
                   />
+
                 </td>
                 <td className="data-grid-cell-two">
                   <textarea
@@ -139,7 +143,8 @@ const DataGrid_demo: React.FC = () => {
                 </td>
                 <td className="data-grid-cell-two">
                   <div>
-                    hello
+                    testing 12
+                    testingtestingtestingtestingtestingtestingtestingtestingtestingtesting 12 testingtesting 12 testing data-grid-cell-two
                   </div>
                 </td>
               </tr>
@@ -163,6 +168,7 @@ const DataGrid_demo: React.FC = () => {
           <td className='table-col'>Short</td>
         </tr>
       </table>
+      
 
     </div>
   );
