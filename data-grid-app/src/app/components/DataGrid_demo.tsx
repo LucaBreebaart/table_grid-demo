@@ -168,7 +168,6 @@ const DataGrid_demo: React.FC = () => {
           <td className='table-col'>Short</td>
         </tr>
       </table>
-      
 
     </div>
   );

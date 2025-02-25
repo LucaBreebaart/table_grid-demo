@@ -1,0 +1,61 @@
+.data-grid-container {
+  background-color: #1d1d1d;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.table-wrapper {
+  border: 1px solid #404040;
+  max-height: 400px;
+  position: relative;
+}
+
+.data-grid-table {
+  /* Allow table to expand based on content */
+  width: max-content;
+  min-width: 100%;
+}
+
+.table-heading {
+  position: sticky;
+  top: 0;
+  background-color: #2a2a2a;
+  padding: 6px;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  vertical-align: top;
+  white-space: nowrap;
+  min-width: 50px;
+}
+
+.table-col {
+  width: max-content;
+  max-width: 200px;
+  min-width: 50px;
+  padding: 6px;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  vertical-align: top;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.editable-cell {
+  width: 100%;
+  min-width: inherit;
+  outline: none;
+  display: inline-block;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.editable-cell:empty::before {
+  content: "Type here...";
+  color: #aaa;
+  font-style: italic;
+}
+
+.editable-cell:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
