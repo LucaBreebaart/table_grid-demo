@@ -4,7 +4,7 @@
 
 // export default function Home() {
 //   const headers = ['Name', 'Age', 'City', 'Occupation', 'Email', 'Phone', 'Department', 'Status'];
-  
+
 //   // Creating more sample data to demonstrate scrolling
 //   const sampleData = Array.from({ length: 30 }, (_, i) => [
 //     `Employee ${i + 1}`,
@@ -25,8 +25,6 @@
 //   );
 // }
 
-import DataGrid_demo from "./components/DataGrid_demo";
-import DataGrid_demo_two from "./components/DataGrid_demo_two";
 import QualityControlTable from "./components/QualityControlTable";
 
 export default function Page() {
