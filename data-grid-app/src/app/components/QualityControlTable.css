@@ -3,13 +3,13 @@
     padding: 1.5rem;
     border-radius: 0.5rem;
     color: #e0e0e0;
-  }
-  
-  .header-section {
+}
+
+.header-section {
     margin-bottom: 1.5rem;
-  }
-  
-  .inspection-info {
+}
+
+.inspection-info {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 0.75rem;
@@ -17,60 +17,60 @@
     padding: 1rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
-  }
-  
-  .info-item {
+}
+
+.info-item {
     display: flex;
     align-items: center;
-  }
-  
-  .info-label {
+}
+
+.info-label {
     font-weight: bold;
     margin-right: 0.5rem;
     color: #a0a0a0;
-  }
-  
-  .info-value {
+}
+
+.info-value {
     color: #ffffff;
-  }
-  
-  .loading-spinner {
+}
+
+.loading-spinner {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
     font-size: 1.25rem;
     color: #a0a0a0;
-  }
-  
-  .error-message {
+}
+
+.error-message {
     background-color: rgba(220, 38, 38, 0.1);
     color: #ef4444;
     padding: 1rem;
     border-radius: 0.5rem;
     text-align: center;
     margin: 2rem 0;
-  }
-  
-  .table-wrapper {
+}
+
+.table-wrapper {
     border: 1px solid #404040;
     max-height: 600px;
     position: relative;
-  }
-  
-  .data-grid-table {
+}
+
+.data-grid-table {
     width: max-content;
     min-width: 100%;
-  }
-  
-  .data-grid-header {
+}
+
+.data-grid-header {
     position: sticky;
     top: 0;
     z-index: 1;
     background-color: #2a2a2a;
-  }
-  
-  .table-heading {
+}
+
+.table-heading {
     padding: 8px;
     border-right: 1px solid #404040;
     border-bottom: 1px solid #404040;
@@ -80,56 +80,63 @@
     min-width: 80px;
     font-weight: bold;
     color: #ffffff;
-  }
-  
-  .table-row:nth-child(even) {
+}
+
+.table-row:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.05);
-  }
-  
-  .table-col {
+}
+
+.table-col {
     max-width: 300px;
     min-width: 80px;
-    padding: 6px;
-    padding-inline: 20px;
     border-right: 1px solid #404040;
     border-bottom: 1px solid #404040;
     vertical-align: middle;
-    text-align: center;
+    padding: 6px;
+    padding-inline: 20px;
+    text-align: left;
     overflow-wrap: break-word;
     word-break: break-word;
     color: #e0e0e0;
-  }
-  
-  .editable-cell {
+}
+
+/* Special handling for cells with editable content */
+.editable-cell {
     width: 100%;
     min-height: 24px;
     outline: none;
-    display: inline-block;
     overflow-wrap: break-word;
     word-break: break-word;
     white-space: pre-wrap;
-    background-color: rgba(255, 255, 255, 0.07);
-    border-radius: 4px;
-    padding: 4px;
+    background-color: rgb(30, 34, 58);
+    padding: 6px 20px;
     cursor: text;
-  }
-  
-  .editable-cell:empty::before {
+    box-sizing: border-box;
+    /* Removed fixed height to let JS handle it */
+}
+
+.editable-cell:empty::before {
     content: "Edit...";
     color: #888;
     font-style: italic;
-  }
-  
-  .editable-cell:focus {
+}
+
+.editable-cell:focus {
     background-color: rgba(255, 255, 255, 0.15);
     box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.6);
-  }
-  
-  .total-row {
+}
+
+/* Table cell that contains editable content */
+.table-col:has(.editable-cell) {
+    padding: 0;
+    height: 100%;
+}
+
+.total-row {
     background-color: #2a2a2a !important;
     font-weight: bold;
-  }
-  
-  .total-row .table-col {
+}
+
+.total-row .table-col {
     border-top: 2px solid #505050;
-  }
+}
